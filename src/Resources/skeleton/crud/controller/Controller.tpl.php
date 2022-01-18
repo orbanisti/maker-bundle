@@ -28,7 +28,7 @@ class <?= $class_name ?> extends <?= $parent_class_name; ?><?= "\n" ?>
     {
         $qb=$<?= $repository_var ?>->createQueryBuilder('o');
         return $this->render('<?= $templates_path ?>/index.html.twig', [
-            '<?= $entity_twig_var_plural ?>' => $paginatorFactory->create($qb, $request),
+            'pagination' => $paginatorFactory->create($qb, $request),
         ]);
     }
 <?php else: ?>
