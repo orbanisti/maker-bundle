@@ -12,7 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\<?= $parent_class_name ?>;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
+use App\Service\PaginatorFactory;
 <?php if ($use_attributes) { ?>
 #[Route('<?= $route_path ?>')]
 <?php } else { ?>
@@ -24,10 +24,11 @@ class <?= $class_name ?> extends <?= $parent_class_name; ?><?= "\n" ?>
 {
 <?= $generator->generateRouteForControllerMethod('/', sprintf('%s_index', $route_name), ['GET']) ?>
 <?php if (isset($repository_full_class_name)): ?>
-    public function index(<?= $repository_class_name ?> $<?= $repository_var ?>): Response
+    public function index(<?= $repository_class_name ?> $<?= $repository_var ?>,PaginatorFactory $paginatorFactory,Request $request): Response
     {
+        $qb=$<?= $repository_var ?>->createQueryBuilder('o');
         return $this->render('<?= $templates_path ?>/index.html.twig', [
-            '<?= $entity_twig_var_plural ?>' => $<?= $repository_var ?>->findAll(),
+            '<?= $entity_twig_var_plural ?>' => $paginatorFactory->create($qb, $request),
         ]);
     }
 <?php else: ?>
