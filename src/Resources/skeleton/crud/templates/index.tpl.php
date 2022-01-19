@@ -4,7 +4,7 @@
 <div class="col-md-12">
     <div class="card">
         <div class="card-header">
-            <a class="btn btn-primary" href="{{ path('<?= $route_name ?>_new') }}">Create new</a>
+            <a class="btn btn-primary  mr-2" href="{{ path('<?= $route_name ?>_new') }}">Create new</a>
 
         </div>
         <div class="card-body">
