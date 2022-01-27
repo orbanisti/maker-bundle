@@ -32,14 +32,14 @@ class <?= $class_name ?> extends <?= $parent_class_name; ?><?= "\n" ?>
         ]);
     }
 <?php else: ?>
-    public function index(EntityManagerInterface $entityManager): Response
+    public function index(EntityManagerInterface $entityManager,PaginatorFactory $paginatorFactory,Request $request): Response
     {
         $<?= $entity_var_plural ?> = $entityManager
             ->getRepository(<?= $entity_class_name ?>::class)
             ->findAll();
 
         return $this->render('<?= $templates_path ?>/index.html.twig', [
-            '<?= $entity_twig_var_plural ?>' => $<?= $entity_var_plural ?>,
+            'pagination' =>  $paginatorFactory->create($qb, $request),
         ]);
     }
 <?php endif ?>

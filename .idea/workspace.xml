@@ -4,13 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf85ddbe-4119-44c8-ab73-f07b2bd2f5cc" name="Default Changelist" comment="" />
+    <list default="true" id="cf85ddbe-4119-44c8-ab73-f07b2bd2f5cc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/skeleton/crud/controller/Controller.tpl.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Resources/skeleton/crud/controller/Controller.tpl.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -41,7 +44,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642515663438</updated>
-      <workItem from="1642515664685" duration="937000" />
+      <workItem from="1642515664685" duration="1349000" />
+      <workItem from="1642668457427" duration="51000" />
+      <workItem from="1643291777254" duration="66000" />
     </task>
     <servers />
   </component>
